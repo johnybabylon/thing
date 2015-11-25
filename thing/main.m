@@ -7,11 +7,35 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NewPerson.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        NSMutableArray *things = [[NSMutableArray alloc] init];
+        
+        [things addObject:@"Danny"];
+        [things addObject:@"You"];
+        [things addObject:@"Parker"];
+        [things addObject: [NSNumber numberWithInt:23]];
+        [things addObject: [NSNumber numberWithInt: 54]];
+        
+        [things insertObject:@"PrimeTime" atIndex:5];
+        
+        
+        
+        things = nil;
+        
+        
+        
+        NewPerson *person = [[NewPerson alloc] initWithPersonName:@"Larry Programmer"
+                                                   valueInDollars:10000
+                                                     personNumber:@"415-889-0009"];
+        
+        NSLog(@" %@", person);
+        
+        person = nil;
+              
     }
     return 0;
 }
